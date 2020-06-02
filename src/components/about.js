@@ -19,6 +19,8 @@ export default () => {
                 <AvatarContainer>
                   <Avatar
                     fluid={data.avatar.childImageSharp.fluid}
+                    backgroundColor={colors.red}
+                    loading="eager"
                     alt={author}
                   />
                 </AvatarContainer>
@@ -170,8 +172,8 @@ const bioQuery2 = graphql`
   query BioQuery2 {
     avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
       childImageSharp {
-        fluid(maxWidth: 1000, quality: 90) {
-          ...GatsbyImageSharpFluid_withWebp
+        fluid(maxWidth: 400, quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
