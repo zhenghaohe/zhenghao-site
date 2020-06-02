@@ -33,7 +33,6 @@ const GlobalStyle = createGlobalStyle`
       }
       a {
     box-shadow: none;
-    font-size: 2rem;
     cursor: pointer;
   }
 `

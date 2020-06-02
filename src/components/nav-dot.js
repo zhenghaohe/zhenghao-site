@@ -30,6 +30,7 @@ const Dot = styled.a`
   height: 4rem;
   width: 4rem;
   background-color: ${colors.slate};
+  opacity: 0.7;
   border-radius: 50%;
   display: inline-block;
 `

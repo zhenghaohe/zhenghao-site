@@ -28,6 +28,9 @@ const Main = () => {
             className="heading"
             css={css`
               font-size: 7rem;
+              ${media.tablet`
+              font-size: 5rem;
+              `};
               font-weight: inherit;
             `}
           >

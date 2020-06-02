@@ -48,7 +48,10 @@ export default () => {
 const Footer = styled.footer`
   font-size: 2.5rem;
   grid-column: content-start / content-end;
-  ${media.tablet`grid-column: 1 / -1;`};
+  ${media.tablet`
+  grid-column: 1 / -1;
+  height: 10rem;
+  `};
   position: sticky;
   bottom: 0;
   height: 16rem;
