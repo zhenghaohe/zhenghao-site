@@ -70,6 +70,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
     resolve: {
       alias: {
         "@components": path.resolve(__dirname, "src/components"),
+        "@helpers": path.resolve(__dirname, "src/helpers"),
         "@config": path.resolve(__dirname, "src/config"),
         "@content": path.resolve(__dirname, "content"),
         "@fonts": path.resolve(__dirname, "src/fonts"),

@@ -28,7 +28,7 @@ class IndexPage extends React.Component {
           default starter blog running on Netlify CMS.
         </p>
         <p>Now go build something great!</p>
-        <Link to="/blog/">
+        <Link to="/wip">
           <Button marginTop="35px">Go to Blog</Button>
         </Link>
       </Layout>
