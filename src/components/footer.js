@@ -8,7 +8,12 @@ const { colors } = theme
 
 export default () => {
   return (
-    <Footer data-sal="fade" data-sal-delay="500" data-sal-duration="1000">
+    <Footer
+      data-sal="fade"
+      data-sal-delay="100"
+      data-sal-easing="ease"
+      data-sal-duration="500"
+    >
       <FlexContainer>
         <li className="footer__item">
           <button
@@ -46,6 +51,9 @@ export default () => {
 }
 
 const Footer = styled.footer`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   font-size: 2.5rem;
   grid-column: content-start / content-end;
   ${media.tablet`
@@ -65,6 +73,7 @@ const FlexContainer = styled.ul`
   display: flex;
   justify-content: flex-end;
   list-style: none;
+  margin: 0;
 
   .footer__name {
     flex: 1;

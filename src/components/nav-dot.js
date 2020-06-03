@@ -7,7 +7,12 @@ import scrollTo from "gatsby-plugin-smoothscroll"
 const { colors } = theme
 
 export default () => (
-  <DotContainer data-sal="fade" data-sal-delay="100" data-sal-duration="1000">
+  <DotContainer
+    data-sal="fade"
+    data-sal-delay="100"
+    data-sal-easing="ease"
+    data-sal-duration="500"
+  >
     <Dot
       onClick={() => {
         scrollTo("#main-section")

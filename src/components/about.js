@@ -33,7 +33,7 @@ export default () => {
               data-sal="slide-up"
               data-sal-delay="300"
               data-sal-easing="ease"
-              data-sal-duration="300"
+              data-sal-duration="1000"
             >
               <p>Hi. 你好.</p>
               <p>
