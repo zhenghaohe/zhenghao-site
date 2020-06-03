@@ -26,13 +26,24 @@ export default () => {
                 </AvatarContainer>
               </Link>
             </PicContainer>
-            <div className="bio">
+            <div
+              className="bio"
+              data-sal="slide-up"
+              data-sal-delay="300"
+              data-sal-easing="ease"
+              data-sal-duration="300"
+            >
               <p>
                 Hi, I a front end software engineer working at Amazon AWS IoT
                 based in Vancouver.
               </p>
             </div>
-            <div className="socialmedia">
+            <div
+              className="socialmedia"
+              data-sal="slide-up"
+              data-sal-easing="ease"
+              data-sal-duration="1000"
+            >
               <a href="" className="socialmedia-link">
                 linkedin
               </a>

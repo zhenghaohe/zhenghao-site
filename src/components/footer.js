@@ -9,7 +9,11 @@ const { colors } = theme
 export default () => {
   return (
     <Footer>
-      <FlexContainer>
+      <FlexContainer
+        data-sal="fade"
+        data-sal-delay="100"
+        data-sal-duration="1000"
+      >
         <li className="footer__item">
           <button
             className="footer__link"

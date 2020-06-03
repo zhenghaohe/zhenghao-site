@@ -7,7 +7,7 @@ import scrollTo from "gatsby-plugin-smoothscroll"
 const { colors } = theme
 
 export default () => (
-  <DotContainer>
+  <DotContainer data-sal="fade" data-sal-delay="100" data-sal-duration="1000">
     <Dot
       onClick={() => {
         scrollTo("#main-section")
@@ -29,7 +29,7 @@ const DotContainer = styled.div`
 const Dot = styled.a`
   height: 4rem;
   width: 4rem;
-  background-color: ${colors.slate};
+  background-color: ${colors.red};
   opacity: 0.7;
   border-radius: 50%;
   display: inline-block;

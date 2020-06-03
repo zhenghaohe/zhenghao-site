@@ -23,6 +23,9 @@ const Main = () => {
             ${media.tablet`margin-top: clamp(60vw, 60vh,80vw);`};
             ${media.thone`margin-top: 60vw;`};
           `}
+          data-sal="fade"
+          data-sal-delay="100"
+          data-sal-duration="1000"
         >
           <h1
             className="heading"

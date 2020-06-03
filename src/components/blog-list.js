@@ -16,7 +16,13 @@ export default () => {
         const siteTitle = data.site.siteMetadata.title
         const posts = data.allMdx.edges
         return (
-          <BlogContainer id="blog-list">
+          <BlogContainer
+            id="blog-list"
+            data-sal="slide-up"
+            data-sal-delay="100"
+            data-sal-duration="1000"
+            data-sal-easing="ease"
+          >
             {posts.map(({ node }) => {
               const title = node.frontmatter.title || node.fields.slug
               return (
