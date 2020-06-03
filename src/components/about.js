@@ -191,6 +191,7 @@ const AboutSection = styled.section`
     grid-column: 3 / span 1;
     ${media.tablet`
     margin-left: 2rem;
+    margin-bottom: 4rem;
   `};
   }
 

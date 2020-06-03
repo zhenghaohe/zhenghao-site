@@ -30,6 +30,8 @@ const GlobalStyle = createGlobalStyle`
         ${media.tablet`
             padding: 0;
         `}
+            ${"" /* color: ${colors.slate}; */}
+
       }
       a {
     box-shadow: none;
