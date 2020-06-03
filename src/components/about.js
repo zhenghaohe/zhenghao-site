@@ -1,6 +1,8 @@
 import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 import styled from "styled-components"
+import { css } from "styled-components"
+
 import { theme, mixins, media } from "@styles"
 import Img from "gatsby-image"
 
@@ -33,17 +35,38 @@ export default () => {
               data-sal-easing="ease"
               data-sal-duration="300"
             >
+              <p>Hi. 你好.</p>
               <p>
-                Hi, I a front end software engineer working at Amazon AWS IoT
-                based in Vancouver.
+                My name is Zhenghao He(贺征豪). I am a software engineer based
+                in Vancouver. I work at Amazon Web Services (AWS), building web
+                apps primarily using React, TypeScript, Web Components and
+                WebGl.
+              </p>
+              <p>
+                I was born and raised in China. I used to live in Chengdu before
+                I moved to Vancouver. I also lived in Taipei for a while. And I
+                hope one day I can move to Japan.
+              </p>
+              <p>
+                Outside of programming, I enjoy taking pictures, drawing and
+                doing meditation.I have been also practising Stoicism for one
+                year.
               </p>
             </div>
+
             <div
               className="socialmedia"
               data-sal="slide-up"
               data-sal-easing="ease"
               data-sal-duration="1000"
             >
+              <p
+                css={css`
+                  font-size: 2rem;
+                `}
+              >
+                You can also find me on
+              </p>
               <a href="" className="socialmedia-link">
                 linkedin
               </a>
@@ -133,7 +156,7 @@ const AboutSection = styled.section`
   ${media.tablet`grid-column: 1 / -1;
   `};
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: ${colors.lightNavy};
   z-index: 100;
@@ -147,11 +170,17 @@ const AboutSection = styled.section`
     display: flex;
   `};
   .bio {
+    padding: 2rem;
     grid-column: 3 / span 1;
     font-size: 2rem;
     align-self: center;
     ${media.tablet`
-        margin-left: 2rem;
+    font-size: 1.5rem;
+
+        /* margin-left: 2rem; */
+        margin-bottom: 4rem
+        margin-right: 1rem;
+
   `};
   }
 

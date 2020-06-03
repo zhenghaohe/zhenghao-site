@@ -34,12 +34,8 @@ function Bio() {
               }}
             />
             <p>
-              Written by <strong>{author}</strong> who lives and works in San
-              Francisco building useful things.
-              {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
-                You should follow him on Twitter
-              </a>
+              I’m Zhenghao He and this is my blog. I write stuff in English and
+              Chinese on here.
             </p>
           </Container>
         )

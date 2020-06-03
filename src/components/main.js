@@ -48,7 +48,7 @@ const Main = () => {
               `};
             `}
           >
-            Front End Enginee at Amazon
+            Front-End Software Engineer
           </h2>
           <h3
             className="description"
