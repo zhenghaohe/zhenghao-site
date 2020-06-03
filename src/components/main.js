@@ -20,12 +20,11 @@ const Main = () => {
           css={css`
             margin-top: 50vh;
             margin-bottom: 20vh;
-            ${media.tablet`margin-top: clamp(60vw, 60vh,80vw);`};
-            ${media.thone`margin-top: 60vw;`};
+            ${media.tablet`margin-top: clamp(60vw, 60vh, 80vw);`};
           `}
-          data-sal="fade"
-          data-sal-delay="100"
-          data-sal-duration="1000"
+          //   data-sal="fade"
+          //   data-sal-delay="100"
+          //   data-sal-duration="1000"
         >
           <h1
             className="heading"
@@ -44,6 +43,9 @@ const Main = () => {
             css={css`
               font-size: 3rem;
               font-weight: inherit;
+              ${media.tablet`
+              font-size: 2rem;
+              `};
             `}
           >
             Front End Enginee at Amazon
@@ -53,6 +55,9 @@ const Main = () => {
             css={css`
               margin-top: 3rem;
               font-size: 5rem;
+              ${media.tablet`
+              font-size: 4rem;
+              `};
             `}
           >
             I build things.

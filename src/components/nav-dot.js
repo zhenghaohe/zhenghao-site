@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { css } from "styled-components"
-import { theme } from "@styles"
+import { theme, media } from "@styles"
 import scrollTo from "gatsby-plugin-smoothscroll"
 
 const { colors } = theme
@@ -24,6 +24,10 @@ const DotContainer = styled.div`
   height: 45px;
   margin-top: 3%;
   margin-left: 3%;
+  ${media.tablet`
+  margin-top: 6%;
+  margin-left: 6%;
+  `};
 `
 
 const Dot = styled.a`
