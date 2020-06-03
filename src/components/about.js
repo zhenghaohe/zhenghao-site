@@ -170,12 +170,14 @@ const AboutSection = styled.section`
     display: flex;
   `};
   .bio {
-    padding: 2rem;
     grid-column: 3 / span 1;
     font-size: 2rem;
     align-self: center;
+    padding-right: 2rem;
+
     ${media.tablet`
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    padding: 2rem 2rem 2rem 4rem;
 
         /* margin-left: 2rem; */
         margin-bottom: 4rem
@@ -190,7 +192,7 @@ const AboutSection = styled.section`
     font-size: 3rem;
     grid-column: 3 / span 1;
     ${media.tablet`
-    margin-left: 2rem;
+    margin-left: 4rem;
     margin-bottom: 4rem;
   `};
   }
