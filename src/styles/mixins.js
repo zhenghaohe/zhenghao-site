@@ -22,47 +22,31 @@ const mixins = {
 
   link: css`
     display: inline-block;
+    font-size: ${fontSizes.xlarge};
     text-decoration: none;
-    text-decoration-skip-ink: auto;
-    color: inherit;
-    position: relative;
-    transition: ${theme.transition};
-    cursor: pointer;
-    &:hover,
-    &:active,
-    &:focus {
-      color: ${colors.green};
-      outline: 0;
+    box-shadow: none;
+    :link,
+    :visited {
+      color: ${colors.navy};
+    }
+    :hover,
+    :active {
+      color: ${colors.red};
     }
   `,
 
   inlineLink: css`
     display: inline-block;
+    font-size: inherit;
     text-decoration: none;
-    text-decoration-skip-ink: auto;
-    position: relative;
-    transition: ${theme.transition};
-    cursor: pointer;
-    color: ${colors.green};
-    &:hover,
-    &:focus,
-    &:active {
-      color: ${colors.green};
-      outline: 0;
-      &:after {
-        width: 100%;
-      }
+    box-shadow: none;
+    :link,
+    :visited {
+      color: ${colors.navy};
     }
-    &:after {
-      content: "";
-      display: block;
-      width: 0;
-      height: 1px;
-      position: relative;
-      bottom: 0.37em;
-      background-color: ${colors.green};
-      transition: ${theme.transition};
-      opacity: 0.5;
+    :hover,
+    :active {
+      color: ${colors.red};
     }
   `,
 

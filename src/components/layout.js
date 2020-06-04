@@ -1,9 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
-import styled from "styled-components"
-
+import styled, { css } from "styled-components"
 import { rhythm, scale } from "../utils/typography"
-import { GlobalStyle, theme } from "@styles"
+import { theme, mixins } from "@styles"
+
+const { colors, fontSizes } = theme
 
 class Layout extends React.Component {
   render() {
@@ -16,7 +17,7 @@ class Layout extends React.Component {
       header = (
         <h1
           style={{
-            ...scale(1.5),
+            ...scale(1.8),
             marginBottom: rhythm(1.5),
             marginTop: 0,
           }}
@@ -56,7 +57,6 @@ class Layout extends React.Component {
     }
     return (
       <>
-        <GlobalStyle />
         <Wrapper>
           <div
             style={{
@@ -66,8 +66,31 @@ class Layout extends React.Component {
               padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
             }}
           >
-            <header>{header}</header>
-            <main>{children}</main>
+            <header
+              css={css`
+                ${mixins.link}
+                color: ${colors.navy};
+                h1 {
+                  font-size: ${fontSizes.xxxlarge} !important;
+
+                }
+
+              `}
+            >
+              {header}
+            </header>
+            <main
+              css={css`
+                a {
+                  ${mixins.inlineLink}
+                }
+                .blog-nav a {
+                  ${mixins.link}
+                }
+              `}
+            >
+              {children}
+            </main>
           </div>
           <Footer>
             © {new Date().getFullYear()}, Built with
@@ -85,7 +108,7 @@ const Wrapper = styled.div`
 
 const Footer = styled.footer`
   text-align: center;
-  margin: 24px;
+  padding: 2rem;
 `
 
 export default Layout

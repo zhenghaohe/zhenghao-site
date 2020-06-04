@@ -51,9 +51,18 @@ export default () => {
 }
 
 const BlogContainer = styled.div`
-  font-size: ${fontSizes.medium};
+  padding-right: 1rem;
+  font-size: ${fontSizes.xlarge};
+  h3 a {
+    font-size: ${fontSizes.xxxlarge} !important;
+  }
   ${media.tablet`
-  font-size: ${fontSizes.large};
+  h3 {
+    font-size: ${fontSizes.xxlarge};
+  }
+  p {
+    font-size: ${fontSizes.xlarge};
+  }
   `};
 `
 

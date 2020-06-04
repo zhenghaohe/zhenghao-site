@@ -18,6 +18,7 @@ const theme = {
     large: "1.4rem",
     xlarge: "1.8rem",
     xxlarge: "2rem",
+    xxxlarge: "2.8rem",
   },
   borderRadius: "3px",
   easing: "cubic-bezier(0.645, 0.045, 0.355, 1)",
