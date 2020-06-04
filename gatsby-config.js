@@ -25,6 +25,7 @@ module.exports = {
         exitEventName: "sal:out", // Exit event name
       },
     },
+    "gatsby-plugin-page-transitions",
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-styled-components`,
