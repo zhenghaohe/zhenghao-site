@@ -101,7 +101,7 @@ export const pageQuery = graphql`
         description
       }
     }
-    allFile(filter: { sourceInstanceName: { eq: "images" } }) {
+    images: allFile(filter: { sourceInstanceName: { eq: "images" } }) {
       edges {
         node {
           childImageSharp {
@@ -112,7 +112,9 @@ export const pageQuery = graphql`
         }
       }
     }
-    images: allFile(filter: { sourceInstanceName: { eq: "staticAssets" } }) {
+    staticAssets: allFile(
+      filter: { sourceInstanceName: { eq: "staticAssets" } }
+    ) {
       edges {
         node {
           childImageSharp {
