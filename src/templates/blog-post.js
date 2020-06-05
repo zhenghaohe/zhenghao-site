@@ -14,6 +14,7 @@ const { colors } = theme
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.mdx
+
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
 
@@ -98,6 +99,28 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+      }
+    }
+    allFile(filter: { sourceInstanceName: { eq: "images" } }) {
+      edges {
+        node {
+          childImageSharp {
+            fluid(maxWidth: 400, quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    }
+    images: allFile(filter: { sourceInstanceName: { eq: "staticAssets" } }) {
+      edges {
+        node {
+          childImageSharp {
+            fluid(maxWidth: 400, quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
       }
     }
   }

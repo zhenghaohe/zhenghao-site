@@ -37,6 +37,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `images`,
+        name: `images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `${__dirname}/content/blog`,
         name: `blog`,
       },
@@ -49,6 +56,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/static/assets`,
+        name: `staticAssets`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [".mdx", ".md"],
@@ -56,7 +70,11 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 1024,
+              showCaptions: true,
+              linkImagesToOriginal: false,
+              tracedSVG: true,
+              loading: "lazy",
             },
           },
           {
@@ -75,6 +93,7 @@ module.exports = {
             resolve: `gatsby-remark-smartypants`,
           },
         ],
+        plugins: [{ resolve: "gatsby-remark-images" }],
       },
     },
     {
